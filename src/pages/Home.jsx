@@ -27,9 +27,8 @@ const projectIconMap = {
   'real-estate-intelligence': <Database size={22} />,
   'mental-health-analysis': <Brain size={22} />,
   'speech-ai-platform': <Mic size={22} />,
-  'recommendation-engine': <Target size={22} />,
-  'taxitrack': <BarChart size={22} />,
-  'black-friday': <Activity size={22} />
+  'black-friday': <Target size={22} />,
+  'taxitrack': <BarChart size={22} />
 };
 
 export default function Home() {

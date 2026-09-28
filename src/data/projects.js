@@ -63,19 +63,21 @@ export const projects = [
     ]
   },
   {
-    id: 'recommendation-engine',
-    title: 'Recommendation Engine',
-    category: 'Machine Learning',
+    id: 'black-friday',
+    title: 'Black Friday Sales Prediction & MLOps Engine',
+    category: 'Machine Learning & MLOps',
     type: 'ai',
-    shortDescription: 'Hybrid recommendation system combining collaborative filtering, content-based filtering, and embedding search.',
-    description: 'Developed a hybrid recommendation engine integrating collaborative filtering, content-based filtering, and embedding-based semantic search. Built to serve personalized recommendations at scale with optimized retrieval and ranking pipelines.',
-    tech: ['Python', 'Embeddings', 'Collaborative Filtering', 'Content-Based', 'FastAPI'],
+    shortDescription: 'Production MLOps platform with ONNX Runtime serving (<1.3ms), persistent Redis caching (>94% latency reduction), hybrid Apriori + Item2Vec recommendation engine, and Gower customer personas.',
+    description: 'An enterprise-grade Data Engineering, Machine Learning, and Real-Time Personalization platform built on 550,000+ retail transactions. Features ONNX Runtime C++ model serving (<1.3ms latency), 2D vectorized matrix ONNX batch predictions, 6-hour persistent Redis caching, a hybrid Recommendation Engine (508 Apriori association rules + 32-dim Item2Vec embeddings + PageRank graph centrality), complete-linkage Gower customer segmentation (10 personas), MLflow Champion/Challenger model registry, Evidently AI drift monitoring, automated 6-hour cron scheduler, and an interactive Reflex Python web UI.',
+    tech: ['Python', 'FastAPI', 'ONNX Runtime', 'Redis', 'PostgreSQL', 'MLflow', 'Scikit-Learn', 'LightGBM', 'Reflex', 'Docker', 'Item2Vec', 'Apriori'],
     highlights: [
-      'Hybrid approach combining multiple recommendation strategies',
-      'Embedding-based semantic search for content discovery',
-      'Scalable architecture for production workloads',
-      'Personalized ranking pipeline with real-time updates'
-    ]
+      'ONNX C++ serving latency <1.3ms (<0.14ms graph execution) delivering >750 req/sec (11x QPS gain)',
+      'Persistent Redis 6-hour caching & vectorized 2D matrix batch inference (>94% latency reduction to 385ms)',
+      'Hybrid recommendation engine combining 508 Apriori rules, 32-dim Item2Vec vectors, and PageRank graph centrality',
+      'Hierarchical Gower customer segmentation (5,891 profiles into 10 empirical personas) with MLflow model registry',
+      '0.00% error rate across 695 Locust load testing requests with 50.32 req/sec total platform throughput'
+    ],
+    github: 'https://github.com/Ziadashraf301/Black-Friday'
   },
   {
     id: 'taxitrack',
@@ -92,21 +94,5 @@ export const projects = [
       'Modern data engineering best practices'
     ],
     github: 'https://github.com/Ziadashraf301/TaxiTrack'
-  },
-  {
-    id: 'black-friday',
-    title: 'Black Friday Analysis',
-    category: 'Data Science & Analytics',
-    type: 'ai',
-    shortDescription: 'Statistical analysis of Black Friday transactions using ML algorithms to generate actionable marketing insights.',
-    description: 'Comprehensive statistical analysis of Black Friday transaction data to generate actionable insights for marketing teams. Leverages machine learning algorithms including Random Forest and other ensemble methods for customer behavior prediction and segmentation.',
-    tech: ['Python', 'scikit-learn', 'Random Forest', 'Pandas', 'Data Visualization'],
-    highlights: [
-      'Customer segmentation based on purchasing behavior',
-      'Predictive modeling for transaction value estimation',
-      'Marketing-actionable insights from transaction patterns',
-      'Feature importance analysis for business strategy'
-    ],
-    github: 'https://github.com/Ziadashraf301/Black-Friday'
   }
 ];
