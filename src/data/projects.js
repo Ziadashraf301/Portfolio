@@ -67,15 +67,15 @@ export const projects = [
     title: 'Black Friday Sales Prediction & MLOps Engine',
     category: 'Machine Learning & MLOps',
     type: 'ai',
-    shortDescription: 'Production MLOps platform with ONNX Runtime serving (<1.3ms), persistent Redis caching (>94% latency reduction), hybrid Apriori + Item2Vec recommendation engine, and Gower customer personas.',
-    description: 'An enterprise-grade Data Engineering, Machine Learning, and Real-Time Personalization platform built on 550,000+ retail transactions. Features ONNX Runtime C++ model serving (<1.3ms latency), 2D vectorized matrix ONNX batch predictions, 6-hour persistent Redis caching, a hybrid Recommendation Engine (508 Apriori association rules + 32-dim Item2Vec embeddings + PageRank graph centrality), complete-linkage Gower customer segmentation (10 personas), MLflow Champion/Challenger model registry, Evidently AI drift monitoring, automated 6-hour cron scheduler, and an interactive Reflex Python web UI.',
-    tech: ['Python', 'FastAPI', 'ONNX Runtime', 'Redis', 'PostgreSQL', 'MLflow', 'Scikit-Learn', 'LightGBM', 'Reflex', 'Docker', 'Item2Vec', 'Apriori'],
+    shortDescription: 'Production MLOps platform featuring ONNX C++ model serving, persistent Redis caching, hybrid recommendation engine, and Gower customer personas.',
+    description: 'An enterprise-grade MLOps and real-time personalization platform built on 550,000+ retail transactions. Integrates sub-millisecond ONNX C++ inference microservices, a hybrid recommendation engine combining association rules and vector embeddings, Gower customer segmentation, MLflow experiment tracking, and an interactive Reflex Python web application.',
+    tech: ['Python', 'FastAPI', 'ONNX Runtime', 'Redis', 'MLflow', 'Scikit-Learn', 'LightGBM', 'Reflex', 'Docker'],
     highlights: [
-      'ONNX C++ serving latency <1.3ms (<0.14ms graph execution) delivering >750 req/sec (11x QPS gain)',
-      'Persistent Redis 6-hour caching & vectorized 2D matrix batch inference (>94% latency reduction to 385ms)',
-      'Hybrid recommendation engine combining 508 Apriori rules, 32-dim Item2Vec vectors, and PageRank graph centrality',
-      'Hierarchical Gower customer segmentation (5,891 profiles into 10 empirical personas) with MLflow model registry',
-      '0.00% error rate across 695 Locust load testing requests with 50.32 req/sec total platform throughput'
+      'Sub-millisecond ONNX C++ model serving with persistent Redis caching (>94% latency reduction)',
+      'Hybrid recommendation engine combining Apriori association rules, Item2Vec embeddings, and PageRank',
+      'Hierarchical customer segmentation clustering 5,800+ profiles into 10 empirical behavioral personas',
+      'Automated pipeline orchestration with MLflow model registry and Evidently AI drift monitoring',
+      '0.00% error rate under Locust load testing with 50+ req/sec total platform throughput'
     ],
     github: 'https://github.com/Ziadashraf301/Black-Friday'
   },
