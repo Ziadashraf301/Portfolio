@@ -526,6 +526,50 @@ body {
   transform: translateX(0);
 }
 
+.project-metric {
+  align-self: flex-start;
+  color: var(--text-primary);
+  background: rgba(200, 164, 92, 0.16);
+  border-left: 3px solid var(--accent-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0 auto 2rem;
+}
+
+.filter-chip {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  color: var(--accent-color);
+  border-color: var(--border-hover);
+}
+
+.filter-chip.active {
+  color: var(--bg-color);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
 /* ============ CERTIFICATES ============ */
 .cert-card {
   display: flex;
