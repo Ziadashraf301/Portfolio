@@ -8,7 +8,7 @@ import {
   Briefcase, Network, Cpu, Server, ArrowRight, Sparkles,
   Github, Linkedin, Award, Users, FolderGit2, Mic, Target,
   FileDown, Wrench, Globe, MessagesSquare, Search, ShoppingCart,
-  Car, Workflow, FlaskConical, Users2, TrendingUp, Microscope, ListChecks
+  Car, Workflow, FlaskConical, Ship, Anchor, TrendingUp, Microscope, ListChecks
 } from 'lucide-react';
 
 const iconMap = {
@@ -34,10 +34,10 @@ const projectIconMap = {
   'taxitrack': <Car size={22} />,
   'mental-health-analysis': <Brain size={22} />,
   'customer-analytics-pipeline': <Workflow size={22} />,
-  'salesforce-databricks': <TrendingUp size={22} />,
   'ai-data-science-lab': <FlaskConical size={22} />,
-  'bigmart-sales': <BarChart size={22} />,
-  'customer-segmentation': <Users2 size={22} />
+  'sales-analytics': <TrendingUp size={22} />,
+  'sczone-port-analytics': <Ship size={22} />,
+  'alexandria-port-platform': <Anchor size={22} />
 };
 
 export default function Home() {
@@ -111,10 +111,11 @@ export default function Home() {
             <h3>AI Engineer — Elshayeb</h3>
             <p className="exp-date">Feb 2026 – Present · Alexandria · Remote</p>
             <p>
-              Built an Egyptian Arabic speech recognition system (VAD, CTC forced alignment and a
-              multimodal LLM) that reached 8% WER and cut manual transcription costs by ~66%.
-              Designed multi-tenant SaaS lead retrieval with hybrid search (BM25 + dense) and reranking,
-              and Gemini lead-qualification services with Pydantic structured outputs and Langfuse.
+              I design and ship the company's production AI systems, from the first prototype to monitored
+              services. My main work is an Egyptian Arabic speech recognition system used every day by the
+              video editing team, and the AI behind the company's SaaS lead platform: search that matches
+              each lead to the right client, LLM services that build tailored onboarding questionnaires, and
+              sales analytics that turn each rep's performance into a short voice report.
             </p>
           </div>
           <div className="card glass">
@@ -122,10 +123,10 @@ export default function Home() {
             <h3>Data Engineer / BI Developer — ISFP</h3>
             <p className="exp-date">Jul 2026 – Present · Alexandria · Remote</p>
             <p>
-              Delivering data, BI and analytics solutions for government port authorities across the
-              Suez Canal Economic Zone. Building ETL pipelines with Alteryx, Oracle SQL, Python and dbt,
-              analyzing invoice data for revenue KPIs, and deploying Tableau Server dashboards with
-              row-level security.
+              I build the data and reporting layer for government port authorities in the Suez Canal Economic
+              Zone: ETL pipelines and data marts, revenue KPIs from invoice data, and secure Tableau dashboards
+              where each user sees only their own data. I'm now moving Alexandria Port's dashboards to an
+              open-source stack to cut license costs.
             </p>
           </div>
           <div className="card glass">
@@ -133,9 +134,9 @@ export default function Home() {
             <h3>AI Engineer Mentor — HumaVolve</h3>
             <p className="exp-date">Jun 2026 – Sep 2026 · Remote</p>
             <p>
-              Led an AI bootcamp for fresh graduates on the production ML lifecycle, RAG systems and
-              containerized FastAPI deployments, and mentored trainees through architecture reviews,
-              code reviews and pipeline debugging.
+              I ran an AI bootcamp for fresh graduates, teaching how a model goes from a notebook to a deployed
+              service. I reviewed their designs and code and helped them debug real projects until they were
+              ready to ship.
             </p>
           </div>
           <div className="card glass">
@@ -143,9 +144,9 @@ export default function Home() {
             <h3>AI Engineer — Egyptian Armed Forces (R&D Lab)</h3>
             <p className="exp-date">Jun 2024 – Jan 2025 · Cairo</p>
             <p>
-              Built healthcare deep learning pipelines with YOLO and UNet, time-series anomaly detection
-              (ARIMA, ETS) on marine sensor data, and a fine-tuned BERT sentiment model that won
-              2nd place in an institutional AI engineering competition.
+              I built AI proofs of concept for research teams: deep learning models that find anomalies in
+              medical images, time-series models that flag unusual marine sensor readings, and a BERT
+              sentiment model that won 2nd place in an internal AI competition.
             </p>
           </div>
           <div className="card glass">
@@ -153,9 +154,9 @@ export default function Home() {
             <h3>Data Scientist — SimpliLearn</h3>
             <p className="exp-date">Dec 2022 – Jun 2024 · Remote</p>
             <p>
-              Delivered 15+ data science projects for academic and research clients with a 95% acceptance
-              rate. Cut baseline prediction error by 5–30% through model tuning and feature engineering
-              in Python and R, and built Power BI and Tableau dashboards.
+              I delivered 15+ data science projects for academic and research clients. My work covered cleaning
+              the data, building and tuning models in Python and R, and explaining the results in clear
+              dashboards.
             </p>
           </div>
           <div className="card glass">
@@ -163,8 +164,9 @@ export default function Home() {
             <h3>Data Scientist — Freelancer.com</h3>
             <p className="exp-date">Jun 2022 – Apr 2024 · Remote</p>
             <p>
-              Deployed ML systems on AWS EC2 with automated retraining, cut annotation time by 90% with
-              point-supervised UNet segmentation, and segmented 100M+ customers with Spark K-Means.
+              I worked with international clients on end-to-end machine learning: models on AWS that retrain
+              automatically, aerial image segmentation that needs only a few labeled points, and customer
+              segmentation with Spark on very large datasets.
             </p>
           </div>
         </div>
@@ -240,14 +242,7 @@ export default function Home() {
               </div>
               <div className="project-content">
                 <h3>{project.title}</h3>
-                {project.metric && <div className="project-metric">{project.metric}</div>}
                 <p>{project.shortDescription}</p>
-                <div className="project-tech">
-                  {project.tech.slice(0, 4).map((t, idx) => (
-                    <span key={idx} className="tech-tag">{t}</span>
-                  ))}
-                  {project.tech.length > 4 && <span className="tech-tag">+{project.tech.length - 4}</span>}
-                </div>
                 <div className="project-link-hint">
                   View Details <ArrowRight size={14} />
                 </div>

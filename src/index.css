@@ -516,8 +516,8 @@ body {
   color: var(--accent-color);
   font-size: 0.85rem;
   font-weight: 600;
-  opacity: 0;
-  transform: translateX(-8px);
+  opacity: 0.75;
+  transform: translateX(0);
   transition: all 0.3s ease;
 }
 
@@ -526,17 +526,6 @@ body {
   transform: translateX(0);
 }
 
-.project-metric {
-  align-self: flex-start;
-  color: var(--text-primary);
-  background: rgba(200, 164, 92, 0.16);
-  border-left: 3px solid var(--accent-color);
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
 
 .project-filters {
   display: flex;

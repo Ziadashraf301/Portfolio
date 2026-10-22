@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, ExternalLink, Github, Lock } from 'lucide-react';
 import { projects } from '../data/projects';
 
 export default function ProjectDetails() {
@@ -77,6 +77,13 @@ export default function ProjectDetails() {
             >
               <Github size={18} /> View on GitHub
             </a>
+          </div>
+        )}
+
+        {!project.github && (
+          <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+            <Lock size={18} color="var(--accent-color)" />
+            Production system built for a company, so the code is private. Happy to walk through it in an interview.
           </div>
         )}
 
