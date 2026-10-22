@@ -25,7 +25,7 @@ export const projects = [
     filters: ['Production', 'GenAI & LLMs'],
     metric: 'Hybrid search + reranking',
     shortDescription: 'Two-stage search for a multi-tenant SaaS platform that matches each lead to the right client using hybrid search, reranking and a custom relevance score.',
-    description: 'Built at Elshayeb for the company's multi-tenant SaaS lead platform. Every client (tenant) has its own questionnaire describing the leads it wants. The first stage retrieves candidate leads with hybrid search that combines BM25 keyword matching and dense embeddings; the second stage reranks them and applies a custom relevance scoring algorithm that compares each lead's answers with the tenant's questions. This replaced rigid hard filters and returns more relevant leads. This is company work, so the code is private.',
+    description: 'Built at Elshayeb for the company’s multi-tenant SaaS lead platform. Every client (tenant) has its own questionnaire describing the leads it wants. The first stage retrieves candidate leads with hybrid search that combines BM25 keyword matching and dense embeddings; the second stage reranks them and applies a custom relevance scoring algorithm that compares each lead’s answers with the tenant’s questions. This replaced rigid hard filters and returns more relevant leads. This is company work, so the code is private.',
     tech: ['Python', 'Hybrid Search', 'BM25', 'Dense Embeddings', 'Reranking'],
     highlights: [
       'Two-stage retrieval: hybrid BM25 + dense search, then reranking',
@@ -41,13 +41,13 @@ export const projects = [
     filters: ['Production', 'GenAI & LLMs'],
     metric: 'Structured LLM outputs',
     shortDescription: 'Gemini service that generates tailored onboarding questionnaires for each tenant, with Pydantic-validated outputs and Langfuse prompt management.',
-    description: 'Built at Elshayeb to automate how new clients are onboarded to the lead platform. The service uses Gemini to generate an onboarding questionnaire tailored to each tenant's business. Outputs are forced into Pydantic schemas and generation is constrained to the tenant's context, so the questionnaires are consistent and safe to use directly in the product. Prompts are versioned in Langfuse, which is also used to track quality and cost. This is company work, so the code is private.',
+    description: 'Built at Elshayeb to automate how new clients are onboarded to the lead platform. The service uses Gemini to generate an onboarding questionnaire tailored to each tenant’s business. Outputs are forced into Pydantic schemas and generation is constrained to the tenant’s context, so the questionnaires are consistent and safe to use directly in the product. Prompts are versioned in Langfuse, which is also used to track quality and cost. This is company work, so the code is private.',
     tech: ['Python', 'Gemini', 'Pydantic', 'Langfuse', 'Prompt Engineering'],
     highlights: [
       'Tenant-specific onboarding questionnaires generated automatically',
       'Pydantic structured outputs and context-constrained generation',
       'Prompt versioning and cost tracking with Langfuse',
-      'Feeds the lead retrieval system with each tenant's criteria'
+      'Feeds the lead retrieval system with each tenant’s criteria'
     ]
   },
   {
