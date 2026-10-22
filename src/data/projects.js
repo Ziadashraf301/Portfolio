@@ -1,7 +1,55 @@
 // `filters` drives the filter chips on the home page.
-export const projectFilters = ['All', 'GenAI & LLMs', 'ML & MLOps', 'Data Science', 'Data Engineering'];
+export const projectFilters = ['All', 'Production', 'GenAI & LLMs', 'ML & MLOps', 'Data Science', 'Data Engineering'];
 
 export const projects = [
+  {
+    id: 'speech-ai-platform',
+    title: 'Egyptian Arabic Speech Recognition',
+    category: 'Production · Elshayeb',
+    filters: ['Production', 'GenAI & LLMs', 'ML & MLOps'],
+    metric: '8% macro WER',
+    shortDescription: 'Production ASR system at Elshayeb for Egyptian Arabic video transcription, combining VAD, CTC forced alignment and a multimodal LLM.',
+    description: 'Built at Elshayeb and used every day by the video editing team. Audio is split with voice activity detection, transcribed by a multimodal LLM and aligned word by word with CTC forced alignment, producing accurate timed subtitles for Egyptian Arabic content. This is company work, so the code is private.',
+    tech: ['Python', 'Multimodal LLMs', 'VAD', 'CTC Forced Alignment', 'Gemini'],
+    highlights: [
+      '8% macro WER and 3% CER on Egyptian Arabic',
+      'Cut manual transcription costs by ~66%',
+      'Word-level timing with CTC forced alignment for subtitles',
+      'Used internally by the company\'s video editing team'
+    ]
+  },
+  {
+    id: 'lead-retrieval',
+    title: 'Multi-Tenant Lead Retrieval',
+    category: 'Production · Elshayeb',
+    filters: ['Production', 'GenAI & LLMs'],
+    metric: 'Hybrid search + reranking',
+    shortDescription: 'Two-stage search for a multi-tenant SaaS platform that matches each lead to the right client using hybrid search, reranking and a custom relevance score.',
+    description: 'Built at Elshayeb for the company's multi-tenant SaaS lead platform. Every client (tenant) has its own questionnaire describing the leads it wants. The first stage retrieves candidate leads with hybrid search that combines BM25 keyword matching and dense embeddings; the second stage reranks them and applies a custom relevance scoring algorithm that compares each lead's answers with the tenant's questions. This replaced rigid hard filters and returns more relevant leads. This is company work, so the code is private.',
+    tech: ['Python', 'Hybrid Search', 'BM25', 'Dense Embeddings', 'Reranking'],
+    highlights: [
+      'Two-stage retrieval: hybrid BM25 + dense search, then reranking',
+      'Custom relevance scoring that matches lead answers to tenant questionnaires',
+      'More accurate matches than the previous hard-filter baseline',
+      'Multi-tenant design: each client gets results based on its own criteria'
+    ]
+  },
+  {
+    id: 'lead-qualification',
+    title: 'AI Lead Qualification Service',
+    category: 'Production · Elshayeb',
+    filters: ['Production', 'GenAI & LLMs'],
+    metric: 'Structured LLM outputs',
+    shortDescription: 'Gemini service that generates tailored onboarding questionnaires for each tenant, with Pydantic-validated outputs and Langfuse prompt management.',
+    description: 'Built at Elshayeb to automate how new clients are onboarded to the lead platform. The service uses Gemini to generate an onboarding questionnaire tailored to each tenant's business. Outputs are forced into Pydantic schemas and generation is constrained to the tenant's context, so the questionnaires are consistent and safe to use directly in the product. Prompts are versioned in Langfuse, which is also used to track quality and cost. This is company work, so the code is private.',
+    tech: ['Python', 'Gemini', 'Pydantic', 'Langfuse', 'Prompt Engineering'],
+    highlights: [
+      'Tenant-specific onboarding questionnaires generated automatically',
+      'Pydantic structured outputs and context-constrained generation',
+      'Prompt versioning and cost tracking with Langfuse',
+      'Feeds the lead retrieval system with each tenant's criteria'
+    ]
+  },
   {
     id: 'telecopilot-ai',
     title: 'TeleCopilot AI',
@@ -52,22 +100,6 @@ export const projects = [
       'Cost-efficient AWS EC2 proof of concept with no per-token API fees'
     ],
     github: 'https://github.com/Ziadashraf301/ContentLens_AI'
-  },
-  {
-    id: 'speech-ai-platform',
-    title: 'Egyptian Arabic Speech Recognition',
-    category: 'Work · Speech AI',
-    filters: ['GenAI & LLMs', 'ML & MLOps'],
-    metric: '8% macro WER',
-    shortDescription: 'Production ASR system at Elshayeb for Egyptian Arabic video transcription, combining VAD, CTC forced alignment and a multimodal LLM.',
-    description: 'Built at Elshayeb and used every day by the video editing team. Audio is split with voice activity detection, transcribed by a multimodal LLM and aligned word by word with CTC forced alignment, producing accurate timed subtitles for Egyptian Arabic content. The system is served as a Dockerized FastAPI service on AWS. This is company work, so the code is private.',
-    tech: ['Python', 'Multimodal LLMs', 'VAD', 'CTC Alignment', 'FastAPI', 'Docker', 'AWS'],
-    highlights: [
-      '8% macro WER and 3% CER on Egyptian Arabic',
-      'Cut manual transcription costs by ~66%',
-      'Word-level timing with CTC forced alignment for subtitles',
-      'Used internally by the company\'s video editing team'
-    ]
   },
   {
     id: 'black-friday',

@@ -8,7 +8,7 @@ import {
   Briefcase, Network, Cpu, Server, ArrowRight, Sparkles,
   Github, Linkedin, Award, Users, FolderGit2, Mic, Target,
   FileDown, Wrench, Globe, MessagesSquare, Search, ShoppingCart,
-  Car, Workflow, FlaskConical, Users2, TrendingUp, Microscope
+  Car, Workflow, FlaskConical, Users2, TrendingUp, Microscope, ListChecks
 } from 'lucide-react';
 
 const iconMap = {
@@ -24,6 +24,8 @@ const iconMap = {
 };
 
 const projectIconMap = {
+  'lead-retrieval': <Target size={22} />,
+  'lead-qualification': <ListChecks size={22} />,
   'telecopilot-ai': <MessagesSquare size={22} />,
   'real-estate-intelligence': <Search size={22} />,
   'contentlens-ai': <Network size={22} />,
@@ -176,7 +178,7 @@ export default function Home() {
           <div className="card glass">
             <div className="card-icon"><Cpu size={28} /></div>
             <h3>GenAI & Agents</h3>
-            <p>LLMs, RAG, AI Agents, LangGraph, LangChain, CrewAI, MCP, Function Calling, OpenAI, Gemini, LoRA/PEFT, Hugging Face.</p>
+            <p>LLMs, RAG, AI Agents, LangGraph, LangChain, CrewAI, MCP, Function Calling, OpenAI, Gemini, Cohere, LoRA/PEFT, Hugging Face.</p>
           </div>
           <div className="card glass">
             <div className="card-icon"><Search size={28} /></div>
@@ -190,13 +192,8 @@ export default function Home() {
           </div>
           <div className="card glass">
             <div className="card-icon"><Network size={28} /></div>
-            <h3>Deep Learning & Vision</h3>
-            <p>PyTorch, TensorFlow, Transformers, BERT, CNNs, YOLO, UNet, OCR, ONNX Runtime.</p>
-          </div>
-          <div className="card glass">
-            <div className="card-icon"><Mic size={28} /></div>
-            <h3>Speech AI</h3>
-            <p>ASR, TTS, Voice Activity Detection, CTC Forced Alignment, Multimodal LLMs, Wav2Vec2, Whisper.</p>
+            <h3>Deep Learning, Vision & Speech</h3>
+            <p>PyTorch, TensorFlow, Transformers, BERT, CNNs, YOLO, UNet, OCR, ASR, TTS, Voice Activity Detection, CTC Forced Alignment, Multimodal LLMs, Wav2Vec2, Whisper, ONNX Runtime.</p>
           </div>
           <div className="card glass">
             <div className="card-icon"><Cloud size={28} /></div>
@@ -215,7 +212,7 @@ export default function Home() {
       <section id="projects" className="section section-alt">
         <h2 className="section-title">Featured Projects</h2>
         <p className="section-subtitle">
-          GenAI, machine learning, data science and data engineering projects, from research to deployment
+          Production systems I built at Elshayeb, followed by my GenAI, machine learning, data science and data engineering projects
         </p>
         <div className="section-divider"></div>
         <div className="project-filters" role="tablist" aria-label="Filter projects">
